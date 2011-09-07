@@ -1,0 +1,14 @@
+[user]
+	name = Maximiliano Dello Russo
+	email = mdellorusso@aonken.com.ar
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+[github]
+	user = maxidr
+[color]
+	branch = auto
+	diff = auto
+	status = auto
