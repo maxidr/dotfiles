@@ -11,6 +11,7 @@ if defined?(::Bundler)
 end
 # Use Pry everywhere
 require "rubygems"
-require 'pry'
-Pry.start
-exit
+# require 'pry'
+# Pry.start
+ActiveRecord::Base.logger = Logger.new(STDOUT) if defined?(Rails::Console)
+#exit
