@@ -1,4 +1,10 @@
 set nocompatible
+
+runtime autoload/vim-pathogen/autoload/pathogen.vim
+
+call pathogen#infect()
+call pathogen#helptags()
+
 "" allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 "
@@ -15,7 +21,8 @@ syntax on
 set t_Co=256 " 256 colors
 set background=dark 
 colorscheme ir_black
-"colorscheme herald 
+"colorscheme herald
+"colorscheme vividchalk
 
 "set hlsearch
 "
