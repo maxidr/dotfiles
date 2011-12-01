@@ -20,9 +20,9 @@ set number " show line numbers
 syntax on 
 set t_Co=256 " 256 colors
 set background=dark 
-colorscheme ir_black
+"colorscheme ir_black
 "colorscheme herald
-"colorscheme vividchalk
+colorscheme vividchalk
 
 "set hlsearch
 "
@@ -56,3 +56,34 @@ colorscheme ir_black
 :set noequalalways
 
 :nmap ,o o<Esc>
+
+"" Set leader as comma instead \ 
+let mapleader = ","
+
+" Use ctrl+t and arrows to move inner tabs
+map <C-t><up> :tabr<cr>
+map <C-t><down> :tabl<cr>
+map <C-t><left> :tabp<cr>
+map <C-t><right> :tabn<cr>
+
+" List buffers
+nnoremap <Leader>l :ls<CR>
+" Go to next buffer
+nnoremap <Leader>b :bp<CR>
+" Go to previous buffer
+nnoremap <Leader>f :bn<CR>
+" Go to last used buffer
+nnoremap <Leader>g :e#<CR>
+" Go to buffer 1/2/3 etc
+nnoremap <Leader>1 :1b<CR>
+nnoremap <Leader>2 :2b<CR>
+nnoremap <Leader>3 :3b<CR>
+nnoremap <Leader>4 :4b<CR>
+nnoremap <Leader>5 :5b<CR>
+nnoremap <Leader>6 :6b<CR>
+nnoremap <Leader>7 :7b<CR>
+nnoremap <Leader>8 :8b<CR>
+nnoremap <Leader>9 :9b<CR>
+nnoremap <Leader>0 :10b<CR>
+" It's useful to show the buffer number in the status line.
+set laststatus=2 statusline=%02n:%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
