@@ -85,5 +85,17 @@ nnoremap <Leader>7 :7b<CR>
 nnoremap <Leader>8 :8b<CR>
 nnoremap <Leader>9 :9b<CR>
 nnoremap <Leader>0 :10b<CR>
+
+"Git branch
+function! GitBranch()
+  let branch = system("git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* //'")
+  if branch != ''
+    return '   Branch: ' . substitute(branch, '\n', '', 'g')
+  en
+  return ''
+endfunction
+
 " It's useful to show the buffer number in the status line.
-set laststatus=2 statusline=%02n:%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
+"set laststatus=2 statusline=%02n:%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
+set laststatus=2 statusline=%02n:%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P\ %{GitBranch()}
+
