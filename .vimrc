@@ -13,7 +13,7 @@ set ruler		" show the cursor position all the time
 set showcmd		" display incomplete commands
 set incsearch		" do incremental searching
 set number " show line numbers
-
+set noswapfile
 "
 "" set filetype check on
 :filetype plugin indent on
@@ -69,9 +69,9 @@ map <C-t><right> :tabn<cr>
 " List buffers
 nnoremap <Leader>l :ls<CR>
 " Go to next buffer
-nnoremap <Leader>b :bp<CR>
+"nnoremap <Leader>b :bp<CR>
 " Go to previous buffer
-nnoremap <Leader>f :bn<CR>
+"nnoremap <Leader>f :bn<CR>
 " Go to last used buffer
 nnoremap <Leader>g :e#<CR>
 " Go to buffer 1/2/3 etc
@@ -87,15 +87,15 @@ nnoremap <Leader>9 :9b<CR>
 nnoremap <Leader>0 :10b<CR>
 
 "Git branch
-function! GitBranch()
-  let branch = system("git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* //'")
-  if branch != ''
-    return '   Branch: ' . substitute(branch, '\n', '', 'g')
-  en
-  return ''
-endfunction
+"function! GitBranch()
+"  let branch = system("git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* //'")
+"  if branch != ''
+"    return '   Branch: ' . substitute(branch, '\n', '', 'g')
+"  en
+"  return ''
+"endfunction
 
 " It's useful to show the buffer number in the status line.
-"set laststatus=2 statusline=%02n:%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
-set laststatus=2 statusline=%02n:%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P\ %{GitBranch()}
+set laststatus=2 statusline=%02n:%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
+"set laststatus=2 statusline=%02n:%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P\ %{GitBranch()}
 
