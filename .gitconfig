@@ -14,3 +14,5 @@
 	status = auto
 [branch]
 	autosetuprebase = always
+[heroku]
+	account = maxidr

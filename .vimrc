@@ -99,3 +99,6 @@ nnoremap <Leader>0 :10b<CR>
 set laststatus=2 statusline=%02n:%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
 "set laststatus=2 statusline=%02n:%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P\ %{GitBranch()}
 
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*   " for Linux/MacOSX
+let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
+

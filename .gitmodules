@@ -37,3 +37,12 @@
 [submodule "vim/bundle/vim-turbux"]
 	path = vim/bundle/vim-turbux
 	url = git://github.com/jgdavey/vim-turbux.git
+[submodule "vim/bundle/vim-rspec"]
+	path = vim/bundle/vim-rspec
+	url = git://github.com/skwp/vim-rspec.git
+[submodule "vim/bundle/ctrlp.vim"]
+	path = vim/bundle/ctrlp.vim
+	url = git://github.com/kien/ctrlp.vim.git
+[submodule "vim/bundle/vim-pasta"]
+	path = vim/bundle/vim-pasta
+	url = git://github.com/sickill/vim-pasta.git

@@ -11,7 +11,12 @@ if defined?(::Bundler)
 end
 # Use Pry everywhere
 require "rubygems"
+#require 'wirb'
+#Wirb.start
 # require 'pry'
 # Pry.start
-ActiveRecord::Base.logger = Logger.new(STDOUT) if defined?(Rails::Console)
+if defined? Rails
+  ActiveRecord::Base.logger = Logger.new(STDOUT)
+  ActiveRecord::Base.clear_active_connections!
+end
 #exit
