@@ -102,3 +102,22 @@ set laststatus=2 statusline=%02n:%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*   " for Linux/MacOSX
 let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
 
+" Functions to run spin from VIM :D
+" Thanks to http://renderedtext.com/blog/2011/10/05/streamlining-vim-with-rspec-and-cucumber/
+function! RailsScriptIfExists(name)
+  " Bundle exec
+  if isdirectory(".bundle") || (exists("b:rails_root") && isdirectory(b:rails_root . "/.bundle"))
+    return "bundle exec " . a:name
+  " System Binary
+  else
+    return a:name
+  end
+endfunction
+
+function! RunSpinPush(args)
+  let spec = RailsScriptIfExists("spin push")
+  let cmd = spec . " " . a:args . " " . @%
+  execute ":silent ! echo " . cmd . " && " . cmd . " &>/dev/null &" | redraw!
+endfunction
+
+map <Leader>s :call RunSpinPush("")<CR>
