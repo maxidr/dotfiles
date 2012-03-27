@@ -1,0 +1,10 @@
+Add new plugin as a module in folder:
+
+    git submodule add git@mygithub:plugin vim/bundle/plugin 
+
+To remove a plugin (or submodule in git):
+    
+  1. Delete the relevant line from the .gitmodules file.
+  2. Delete the relevant section from .git/config.
+  3. Run git rm --cached path_to_submodule (no trailing slash).
+  4. Commit and delete the now untracked submodule files
