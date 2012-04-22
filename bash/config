@@ -10,5 +10,5 @@ WHITE="\[\033[00m\]"
 GIT_PS1_SHOWDIRTYSTATE=true
 PS1="$BLUE\W$YELLOW\$(__git_ps1) $WHITE\$ "
 
-TERM="xterm-color"
-EDITOR="vim"
+export TERM="xterm-color"
+export EDITOR="vim"

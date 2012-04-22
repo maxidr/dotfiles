@@ -124,3 +124,5 @@ map <Leader>s :call RunSpinPush("")<CR>
 
 " Map ctrl+b for see buffer list
 map <C-b> :CtrlPBuffer<CR>
+
+au BufRead,BufNewFile *.hamlc set ft=haml
