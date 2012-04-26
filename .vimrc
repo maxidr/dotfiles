@@ -126,3 +126,5 @@ map <Leader>s :call RunSpinPush("")<CR>
 map <C-b> :CtrlPBuffer<CR>
 
 au BufRead,BufNewFile *.hamlc set ft=haml
+
+let g:Powerline_symbols = 'fancy'
