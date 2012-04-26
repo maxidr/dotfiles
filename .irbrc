@@ -19,4 +19,12 @@ if defined? Rails
   ActiveRecord::Base.logger = Logger.new(STDOUT)
   ActiveRecord::Base.clear_active_connections!
 end
+
+begin
+  require 'pry'
+  Pry.start
+  exit
+rescue LoadError => e
+  warn "=> Unable to load pry"
+end
 #exit
