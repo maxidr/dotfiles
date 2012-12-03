@@ -1,5 +1,6 @@
 [user]
 	name = Maximiliano Dello Russo
+	email = maxidr@gmail.com
 	email = mdellorusso@aonken.com.ar
 [alias]
 	co = checkout
@@ -15,5 +16,7 @@
 	status = auto
 [branch]
 	autosetuprebase = always
+[heroku]
+[heroku]
 [heroku]
 	account = maxidr

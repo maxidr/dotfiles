@@ -43,3 +43,6 @@ export PATH=/home/maxi/.rvm/gems/ruby-1.9.3-p0@escapadas/bin:/home/maxi/.rvm/gem
 setopt nullglob
 
 [ -s "/home/maxi/.scm_breeze/scm_breeze.sh" ] && source "/home/maxi/.scm_breeze/scm_breeze.sh"
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
