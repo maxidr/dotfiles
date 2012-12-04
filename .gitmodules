@@ -58,3 +58,6 @@
 [submodule "vim/bundle/snipMate"]
 	path = vim/bundle/snipMate
 	url = git@github.com:vim-scripts/snipMate.git
+[submodule "vim/bundle/nerdtree"]
+	path = vim/bundle/nerdtree
+	url = git@github.com:scrooloose/nerdtree.git

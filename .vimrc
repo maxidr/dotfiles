@@ -124,6 +124,20 @@ map <Leader>s :call RunSpinPush("")<CR>
 
 " Map ctrl+b for see buffer list
 map <C-b> :CtrlPBuffer<CR>
+map <Leader>b :CtrlPBuffer<CR>
+
+" NERDTree ---------------------------------------------------------
+" from: https://github.com/scrooloose/nerdtree
+" More help: http://www.catonmat.net/blog/vim-plugins-nerdtree-vim/
+" ------------------------------------------------------------------
+" F2 to open/close NerdTree
+map <F2> :NERDTreeToggle<CR>
+" Press o to open the file in a new buffer or open/close directory.
+" Press t to open the file in a new tab.
+" Press i to open the file in a new horizontal split.
+" Press s to open the file in a new vertical split.
+" Press p to go to parent directory.
+" Press r to refresh the current directory.
 
 au BufRead,BufNewFile *.hamlc set ft=haml
 
