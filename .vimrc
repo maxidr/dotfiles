@@ -142,3 +142,8 @@ map <F2> :NERDTreeToggle<CR>
 au BufRead,BufNewFile *.hamlc set ft=haml
 
 let g:Powerline_symbols = 'fancy'
+
+autocmd FileType ruby set omnifunc=rubycomplete#Complete
+autocmd FileType ruby let g:rubycomplete_buffer_loading=1
+autocmd FileType ruby let g:rubycomplete_rails=1
+autocmd FileType ruby let g:rubycomplete_classes_in_global=1
