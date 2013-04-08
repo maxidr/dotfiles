@@ -1,0 +1,5 @@
+Para inicializar los submódulos de git (plugins y pathogen de vim):
+
+git submodule init
+git submodule update
+
