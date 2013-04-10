@@ -61,3 +61,6 @@
 [submodule "vim/bundle/vim-ruby"]
 	path = vim/bundle/vim-ruby
 	url = git@github.com:vim-ruby/vim-ruby.git
+[submodule "vim/bundle/powerline"]
+	path = vim/bundle/powerline
+	url = git@github.com:Lokaltog/powerline.git

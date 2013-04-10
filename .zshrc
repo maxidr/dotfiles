@@ -36,13 +36,12 @@ plugins=(git rails3 ruby bundler)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/home/maxi/.rvm/gems/ruby-1.9.3-p0@escapadas/bin:/home/maxi/.rvm/gems/ruby-1.9.3-p0@global/bin:/home/maxi/.rvm/rubies/ruby-1.9.3-p0/bin:/home/maxi/.rvm/bin:/home/maxi/.rvm/bin:/home/maxi/bin:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:"/home/maxi/share/Sublime Text 2/":/home/maxi/.rvm/bin
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
 
 setopt nullglob
 
-[ -s "/home/maxi/.scm_breeze/scm_breeze.sh" ] && source "/home/maxi/.scm_breeze/scm_breeze.sh"
-
 ### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
+# export PATH="/usr/local/heroku/bin:$PATH"
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+eval "$(rbenv init -)"

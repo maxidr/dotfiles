@@ -141,6 +141,7 @@ map <F2> :NERDTreeToggle<CR>
 
 au BufRead,BufNewFile *.hamlc set ft=haml
 
+set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 let g:Powerline_symbols = 'fancy'
 
 autocmd FileType ruby set omnifunc=rubycomplete#Complete
