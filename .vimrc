@@ -17,7 +17,7 @@ set noswapfile
 "
 "" set filetype check on
 :filetype plugin indent on
-syntax on 
+syntax on
 set t_Co=256 " 256 colors
 set background=dark 
 "colorscheme ir_black
@@ -121,6 +121,15 @@ function! RunSpinPush(args)
 endfunction
 
 map <Leader>s :call RunSpinPush("")<CR>
+
+function! RunZeusTestFile(args)
+  let cmd = "zeus test " . a:args . " " . @%
+  call VimuxRunCommand(cmd)
+endfunction
+
+map <Leader>t :call RunZeusTestFile("")<CR>
+map <Leader>tl :call RunZeusTestFile(":" . line('.'))<CR>
+
 
 " Map ctrl+b for see buffer list
 map <C-b> :CtrlPBuffer<CR>

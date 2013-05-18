@@ -67,3 +67,9 @@
 [submodule "vim/bundle/closetag.vim"]
 	path = vim/bundle/closetag.vim
 	url = git://github.com/docunext/closetag.vim.git
+[submodule "vim/bundle/vimux.git"]
+	path = vim/bundle/vimux.git
+	url = git@github.com:benmills/vimux.git
+[submodule "vim/bundle/vimux-zeus.git"]
+	path = vim/bundle/vimux-zeus.git
+	url = git@github.com:jingweno/vimux-zeus.git
