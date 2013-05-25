@@ -32,6 +32,7 @@ restart the terminal
 
     sudo apt-get install libssl-dev zlib1g-dev libreadline-dev openssl libopenssl-ruby1.9.1 libcurl4-openssl-dev
     git clone git://github.com/sstephenson/rbenv.git ~/.rbenv
+    git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
 
 ## Restore the dotfiles
 
