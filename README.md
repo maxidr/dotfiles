@@ -58,7 +58,7 @@ restart the terminal
     git submodule update
     cd ..
     
-### Patch fonts for poweline
+### Patch fonts for poweline ([from here](https://powerline.readthedocs.org/en/latest/installation/linux.html#font-installation))
         
     wget https://github.com/Lokaltog/powerline/raw/develop/font/PowerlineSymbols.otf
     mkdir .fonts
