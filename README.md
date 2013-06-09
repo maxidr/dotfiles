@@ -72,4 +72,10 @@ restart the terminal
     mv 10-powerline-symbols.conf .config/fontconfig/conf.d/
     
 Restart the terminal
+
+## Extras
+
+Install heroku toolbelt
+
+    wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
     
