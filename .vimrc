@@ -160,3 +160,7 @@ autocmd FileType ruby let g:rubycomplete_classes_in_global=1
 
 autocmd FileType html,eruby let b:closetag_html_style=1
 autocmd FileType html,xhtml,xml,eruby source ~/.vim/bundle/closetag.vim/plugin/closetag.vim
+
+map <Leader>cp "+p<CR>
+map <C-p> "+p<CR>
+
