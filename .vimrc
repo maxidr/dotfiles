@@ -164,3 +164,5 @@ autocmd FileType html,xhtml,xml,eruby source ~/.vim/bundle/closetag.vim/plugin/c
 map <Leader>cp "+p<CR>
 map <C-p> "+p<CR>
 
+" Autocomplete ZEN with Ctrl + t
+let g:user_zen_expandabbr_key='<C-t>'
