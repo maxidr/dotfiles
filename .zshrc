@@ -31,7 +31,7 @@ ZSH_THEME="miloshadzic"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git rails3 ruby bundler tmux)
+plugins=(git ruby bundler tmux)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -42,12 +42,7 @@ export TERM="xterm-256color"
 
 setopt nullglob
 
-### Added by the Heroku Toolbelt
-# export PATH="/usr/local/heroku/bin:$PATH"
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
-eval "$(rbenv init -)"
-
-[[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
 
 export EDITOR="vim"
