@@ -4,11 +4,11 @@ set nocompatible
 " call pathogen#helptags()
 filetype off
 
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#rc()
 
 " Required bundle
-Bundle 'gmarik/vundle'
+Bundle 'gmarik/Vundle.vim'
 
 " My bundles
 " ---------------------------------------------
