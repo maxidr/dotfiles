@@ -44,6 +44,7 @@ Bundle 'Shougo/vimproc.vim'
 Bundle 'terryma/vim-multiple-cursors'
 Bundle 'craigemery/vim-autotag'
 
+Bundle 'scrooloose/nerdtree'
 " ---------------------------------------------
 
 "" allow backspacing over everything in insert mode
