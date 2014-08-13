@@ -1,18 +1,63 @@
 set nocompatible
+" call pathogen#helptags()
+" call pathogen#helptags()
+" call pathogen#helptags()
+filetype off
 
-runtime autoload/vim-pathogen/autoload/pathogen.vim
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
 
-call pathogen#infect()
-call pathogen#helptags()
+" Required bundle
+Bundle 'gmarik/vundle'
+
+" My bundles
+" ---------------------------------------------
+
+"  Color theme
+Bundle 'tpope/vim-vividchalk' 
+"Bundle 'wincent/Command-T'
+
+" Use: 
+" CTRL-P to find file in all the proyect directory
+" CTRL-B to find in buffer (open files)
+" Bundle 'kien/ctrlp.vim'
+
+" Dependencies for vim-snipmate
+Bundle "MarcWeber/vim-addon-mw-utils"
+Bundle "tomtom/tlib_vim"
+Bundle "garbas/vim-snipmate"
+
+Bundle 'honza/vim-snippets'
+
+Bundle 'ervandew/supertab'
+
+Bundle 'vim-ruby/vim-ruby'
+
+Bundle 'scrooloose/syntastic'
+
+Bundle 'plasticboy/vim-markdown'
+
+Bundle 'Shougo/unite.vim'
+Bundle 'Shougo/neomru.vim'
+Bundle 'Shougo/vimproc.vim'
+
+Bundle 'terryma/vim-multiple-cursors'
+Bundle 'craigemery/vim-autotag'
+
+" ---------------------------------------------
 
 "" allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 "
 set history=50		" keep 50 lines of command line history
-set ruler		" show the cursor position all the time
-set showcmd		" display incomplete commands
-set incsearch		" do incremental searching
-set number " show line numbers
+set ruler		      " show the cursor position all the time
+set showcmd		    " display incomplete commands
+set incsearch		  " do incremental searching
+set number        " show line numbers
+if has("mouse")
+  set mouse=a       " Use mouse to scroll over vim (in osx)
+endif
+
 set noswapfile
 "
 "" set filetype check on
@@ -20,6 +65,9 @@ set noswapfile
 syntax on
 set t_Co=256 " 256 colors
 set background=dark 
+
+
+
 "colorscheme ir_black
 "colorscheme herald
 colorscheme vividchalk
@@ -61,10 +109,10 @@ colorscheme vividchalk
 let mapleader = ","
 
 " Use ctrl+t and arrows to move inner tabs
-map <C-t><up> :tabr<cr>
-map <C-t><down> :tabl<cr>
-map <C-t><left> :tabp<cr>
-map <C-t><right> :tabn<cr>
+" map <C-t><up> :tabr<cr>
+" map <C-t><down> :tabl<cr>
+" map <C-t><left> :tabp<cr>
+" map <C-t><right> :tabn<cr>
 
 " List buffers
 nnoremap <Leader>l :ls<CR>
@@ -122,18 +170,15 @@ endfunction
 
 map <Leader>s :call RunSpinPush("")<CR>
 
-function! RunZeusTestFile(args)
-  let cmd = "zeus test " . a:args . " " . @%
-  call VimuxRunCommand(cmd)
-endfunction
-
-map <Leader>t :call RunZeusTestFile("")<CR>
-map <Leader>tl :call RunZeusTestFile(":" . line('.'))<CR>
-
-
+" ctrlp.vim plugin
 " Map ctrl+b for see buffer list
-map <C-b> :CtrlPBuffer<CR>
-map <Leader>b :CtrlPBuffer<CR>
+" map <C-b> :CtrlPBuffer<CR>
+" map <Leader>b :CtrlPBuffer<CR>
+
+" unite 
+nnoremap <silent> <Leader>m :Unite -buffer-name=recent -winheight=10 file_mru<cr>
+nnoremap <Leader>b :Unite -buffer-name=buffers -winheight=10 buffer<cr>
+nnoremap <Leader>f :Unite grep:.<cr>
 
 " NERDTree ---------------------------------------------------------
 " from: https://github.com/scrooloose/nerdtree
@@ -146,6 +191,10 @@ map <F2> :NERDTreeToggle<CR>
 " Press i to open the file in a new horizontal split.
 " Press s to open the file in a new vertical split.
 " Press p to go to parent directory.
+" remap <Leader>f :Unite grep:.<cr>
+"
+" remap <Leader>f :Unite grep:.<cr>
+"
 " Press r to refresh the current directory.
 
 au BufRead,BufNewFile *.hamlc set ft=haml
@@ -159,10 +208,17 @@ autocmd FileType ruby let g:rubycomplete_rails=1
 autocmd FileType ruby let g:rubycomplete_classes_in_global=1
 
 autocmd FileType html,eruby let b:closetag_html_style=1
-autocmd FileType html,xhtml,xml,eruby source ~/.vim/bundle/closetag.vim/plugin/closetag.vim
+" autocmd FileType html,xhtml,xml,eruby source ~/.vim/bundle/closetag.vim/plugin/closetag.vim
 
-map <Leader>cp "+p<CR>
-map <C-p> "+p<CR>
+" map <Leader>cp "+p<CR>
+" map <C-p> "+p<CR>
+
+" CtrlP search
+call unite#filters#matcher_default#use(['matcher_fuzzy'])
+call unite#filters#sorter_default#use(['sorter_rank'])
+call unite#custom#source('file_rec/async','sorters','sorter_rank')
+" replacing unite with ctrl-p
+nnoremap <silent> <C-p> :Unite -start-insert -buffer-name=files -winheight=10 file_rec/async<cr>
 
 " Autocomplete ZEN with Ctrl + t
 let g:user_zen_expandabbr_key='<C-t>'
